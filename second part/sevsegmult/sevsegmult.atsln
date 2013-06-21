@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "sevsegmult", "sevsegmult\sevsegmult.cproj", "{BACEEE98-1FF1-4221-8F2E-CDF6C8E057BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BACEEE98-1FF1-4221-8F2E-CDF6C8E057BD}.Debug|AVR.ActiveCfg = Debug|AVR
+		{BACEEE98-1FF1-4221-8F2E-CDF6C8E057BD}.Debug|AVR.Build.0 = Debug|AVR
+		{BACEEE98-1FF1-4221-8F2E-CDF6C8E057BD}.Release|AVR.ActiveCfg = Release|AVR
+		{BACEEE98-1FF1-4221-8F2E-CDF6C8E057BD}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

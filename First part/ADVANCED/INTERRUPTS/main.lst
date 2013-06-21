@@ -1,0 +1,78 @@
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB2:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 81E0      		ldi r24,lo8(1)
+  25 0002 84B9      		out 36-32,r24
+  26               	.LM3:
+  27               	/* #APP */
+  28               	 ;  10 "main.c" 1
+  29 0004 7894      		sei
+  30               	 ;  0 "" 2
+  31               	.LM4:
+  32               	/* #NOAPP */
+  33 0006 8BE0      		ldi r24,lo8(11)
+  34 0008 8093 8100 		sts 129,r24
+  35               	.LM5:
+  36 000c 82E0      		ldi r24,lo8(2)
+  37 000e 8093 6F00 		sts 111,r24
+  38               	.LM6:
+  39 0012 88E0      		ldi r24,lo8(15624)
+  40 0014 9DE3      		ldi r25,hi8(15624)
+  41 0016 9093 8900 		sts (136)+1,r25
+  42 001a 8093 8800 		sts 136,r24
+  43               	.L2:
+  44 001e 00C0      		rjmp .L2
+  45               	.LFE2:
+  47               	.global	__vector_11
+  49               	__vector_11:
+  50               	.LFB3:
+  51               	.LM7:
+  52 0020 1F92      		push __zero_reg__
+  53 0022 0F92      		push r0
+  54 0024 0FB6      		in r0,__SREG__
+  55 0026 0F92      		push r0
+  56 0028 1124      		clr __zero_reg__
+  57 002a 8F93      		push r24
+  58 002c 9F93      		push r25
+  59               	/* prologue: Signal */
+  60               	/* frame size = 0 */
+  61               	.LM8:
+  62 002e 85B1      		in r24,37-32
+  63 0030 91E0      		ldi r25,lo8(1)
+  64 0032 8927      		eor r24,r25
+  65 0034 85B9      		out 37-32,r24
+  66               	/* epilogue start */
+  67               	.LM9:
+  68 0036 9F91      		pop r25
+  69 0038 8F91      		pop r24
+  70 003a 0F90      		pop r0
+  71 003c 0FBE      		out __SREG__,r0
+  72 003e 0F90      		pop r0
+  73 0040 1F90      		pop __zero_reg__
+  74 0042 1895      		reti
+  75               	.LFE3:
+ 109               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\JAHIRA~1\AppData\Local\Temp/cchDHYdK.s:2      *ABS*:0000003f __SREG__
+C:\Users\JAHIRA~1\AppData\Local\Temp/cchDHYdK.s:3      *ABS*:0000003e __SP_H__
+C:\Users\JAHIRA~1\AppData\Local\Temp/cchDHYdK.s:4      *ABS*:0000003d __SP_L__
+C:\Users\JAHIRA~1\AppData\Local\Temp/cchDHYdK.s:5      *ABS*:00000034 __CCP__
+C:\Users\JAHIRA~1\AppData\Local\Temp/cchDHYdK.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\JAHIRA~1\AppData\Local\Temp/cchDHYdK.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\JAHIRA~1\AppData\Local\Temp/cchDHYdK.s:18     .text:00000000 main
+C:\Users\JAHIRA~1\AppData\Local\Temp/cchDHYdK.s:49     .text:00000020 __vector_11
+
+NO UNDEFINED SYMBOLS

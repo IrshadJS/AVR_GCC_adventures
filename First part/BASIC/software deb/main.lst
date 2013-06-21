@@ -1,0 +1,102 @@
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 91E0      		ldi r25,lo8(1)
+  25 0002 94B9      		out 36-32,r25
+  26               	.LM3:
+  27 0004 85B1      		in r24,37-32
+  28 0006 8927      		eor r24,r25
+  29 0008 85B9      		out 37-32,r24
+  30               	.LM4:
+  31 000a 84E0      		ldi r24,lo8(4)
+  32 000c 84B9      		out 36-32,r24
+  33               	.LM5:
+  34 000e 2198      		cbi 36-32,1
+  35               	.LM6:
+  36 0010 82E0      		ldi r24,lo8(2)
+  37 0012 85B9      		out 37-32,r24
+  38 0014 20E0      		ldi r18,lo8(0)
+  39 0016 30E0      		ldi r19,hi8(0)
+  40               	.LVL0:
+  41 0018 80E0      		ldi r24,lo8(0)
+  42 001a 90E0      		ldi r25,hi8(0)
+  43               	.LVL1:
+  44 001c 40E0      		ldi r20,lo8(0)
+  45 001e 50E0      		ldi r21,hi8(0)
+  46               	.LVL2:
+  47               	.LM7:
+  48 0020 71E0      		ldi r23,lo8(1)
+  49               	.LM8:
+  50 0022 64E0      		ldi r22,lo8(4)
+  51 0024 00C0      		rjmp .L9
+  52               	.L5:
+  53               	.LM9:
+  54 0026 20E0      		ldi r18,lo8(0)
+  55 0028 30E0      		ldi r19,hi8(0)
+  56               	.L9:
+  57               	.LM10:
+  58 002a 1999      		sbic 35-32,1
+  59 002c 00C0      		rjmp .L3
+  60               	.LM11:
+  61 002e 0196      		adiw r24,1
+  62               	.LM12:
+  63 0030 E1E0      		ldi r30,hi8(501)
+  64 0032 853F      		cpi r24,lo8(501)
+  65 0034 9E07      		cpc r25,r30
+  66 0036 04F0      		brlt .L9
+  67               	.LM13:
+  68 0038 2115      		cp r18,__zero_reg__
+  69 003a 3105      		cpc r19,__zero_reg__
+  70 003c 01F4      		brne .L10
+  71               	.L4:
+  72               	.LM14:
+  73 003e 85B1      		in r24,37-32
+  74               	.LVL3:
+  75 0040 8727      		eor r24,r23
+  76 0042 85B9      		out 37-32,r24
+  77               	.LM15:
+  78 0044 85B1      		in r24,37-32
+  79 0046 8627      		eor r24,r22
+  80 0048 85B9      		out 37-32,r24
+  81 004a 21E0      		ldi r18,lo8(1)
+  82 004c 30E0      		ldi r19,hi8(1)
+  83               	.LVL4:
+  84               	.L10:
+  85 004e 80E0      		ldi r24,lo8(0)
+  86 0050 90E0      		ldi r25,hi8(0)
+  87 0052 00C0      		rjmp .L9
+  88               	.L3:
+  89               	.LM16:
+  90 0054 4F5F      		subi r20,lo8(-(1))
+  91 0056 5F4F      		sbci r21,hi8(-(1))
+  92               	.LM17:
+  93 0058 E1E0      		ldi r30,hi8(501)
+  94 005a 453F      		cpi r20,lo8(501)
+  95 005c 5E07      		cpc r21,r30
+  96 005e 04F4      		brge .L5
+  97 0060 00C0      		rjmp .L9
+  98               	.LFE6:
+ 124               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccEEw2an.s:2      *ABS*:0000003f __SREG__
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccEEw2an.s:3      *ABS*:0000003e __SP_H__
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccEEw2an.s:4      *ABS*:0000003d __SP_L__
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccEEw2an.s:5      *ABS*:00000034 __CCP__
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccEEw2an.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccEEw2an.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccEEw2an.s:18     .text:00000000 main
+
+NO UNDEFINED SYMBOLS

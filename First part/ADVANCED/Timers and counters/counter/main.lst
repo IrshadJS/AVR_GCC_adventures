@@ -1,0 +1,90 @@
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB6:
+  20               	.LM1:
+  21 0000 1F93      		push r17
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LM2:
+  25 0002 8FEF      		ldi r24,lo8(-1)
+  26 0004 84B9      		out 36-32,r24
+  27               	.LM3:
+  28 0006 8AB9      		out 42-32,r24
+  29               	.LM4:
+  30 0008 83E0      		ldi r24,lo8(3)
+  31 000a 8093 8100 		sts 129,r24
+  32               	.LM5:
+  33 000e A1E0      		ldi r26,lo8(1)
+  34 0010 B0E0      		ldi r27,hi8(1)
+  35 0012 E1E0      		ldi r30,lo8(1)
+  36 0014 F0E0      		ldi r31,hi8(1)
+  37               	.L4:
+  38               	.LM6:
+  39 0016 40E0      		ldi r20,lo8(0)
+  40 0018 50E0      		ldi r21,hi8(0)
+  41               	.L5:
+  42 001a 742F      		mov r23,r20
+  43 001c 20E0      		ldi r18,lo8(0)
+  44 001e 30E0      		ldi r19,hi8(0)
+  45               	.L3:
+  46 0020 622F      		mov r22,r18
+  47               	.L2:
+  48               	.LM7:
+  49 0022 8091 8400 		lds r24,132
+  50 0026 9091 8500 		lds r25,(132)+1
+  51 002a 895B      		subi r24,lo8(2233)
+  52 002c 9840      		sbci r25,hi8(2233)
+  53 002e 00F0      		brlo .L2
+  54               	.LM8:
+  55 0030 1092 8500 		sts (132)+1,__zero_reg__
+  56 0034 1092 8400 		sts 132,__zero_reg__
+  57               	.LM9:
+  58 0038 CD01      		movw r24,r26
+  59 003a 00C0      		rjmp 2f
+  60 003c 880F      	1:	lsl r24
+  61 003e 991F      		rol r25
+  62 0040 6A95      	2:	dec r22
+  63 0042 02F4      		brpl 1b
+  64 0044 85B9      		out 37-32,r24
+  65 0046 2F5F      		subi r18,lo8(-(1))
+  66 0048 3F4F      		sbci r19,hi8(-(1))
+  67               	.LM10:
+  68 004a 2730      		cpi r18,7
+  69 004c 3105      		cpc r19,__zero_reg__
+  70 004e 01F4      		brne .L3
+  71               	.LM11:
+  72 0050 CF01      		movw r24,r30
+  73 0052 00C0      		rjmp 2f
+  74 0054 880F      	1:	lsl r24
+  75 0056 991F      		rol r25
+  76 0058 7A95      	2:	dec r23
+  77 005a 02F4      		brpl 1b
+  78 005c 8BB9      		out 43-32,r24
+  79 005e 4F5F      		subi r20,lo8(-(1))
+  80 0060 5F4F      		sbci r21,hi8(-(1))
+  81               	.LM12:
+  82 0062 4730      		cpi r20,7
+  83 0064 5105      		cpc r21,__zero_reg__
+  84 0066 01F0      		breq .L4
+  85 0068 00C0      		rjmp .L5
+  86               	.LFE6:
+ 112               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\JAHIRA~1\AppData\Local\Temp/cceYw95Y.s:2      *ABS*:0000003f __SREG__
+C:\Users\JAHIRA~1\AppData\Local\Temp/cceYw95Y.s:3      *ABS*:0000003e __SP_H__
+C:\Users\JAHIRA~1\AppData\Local\Temp/cceYw95Y.s:4      *ABS*:0000003d __SP_L__
+C:\Users\JAHIRA~1\AppData\Local\Temp/cceYw95Y.s:5      *ABS*:00000034 __CCP__
+C:\Users\JAHIRA~1\AppData\Local\Temp/cceYw95Y.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\JAHIRA~1\AppData\Local\Temp/cceYw95Y.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\JAHIRA~1\AppData\Local\Temp/cceYw95Y.s:18     .text:00000000 main
+
+NO UNDEFINED SYMBOLS

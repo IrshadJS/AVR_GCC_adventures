@@ -1,0 +1,57 @@
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB2:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 209A      		sbi 36-32,0
+  25               	.LM3:
+  26 0002 8091 8100 		lds r24,129
+  27 0006 8860      		ori r24,lo8(8)
+  28 0008 8093 8100 		sts 129,r24
+  29               	.LM4:
+  30 000c 88E0      		ldi r24,lo8(15624)
+  31 000e 9DE3      		ldi r25,hi8(15624)
+  32 0010 9093 8900 		sts (136)+1,r25
+  33 0014 8093 8800 		sts 136,r24
+  34               	.LM5:
+  35 0018 8091 8100 		lds r24,129
+  36 001c 8360      		ori r24,lo8(3)
+  37 001e 8093 8100 		sts 129,r24
+  38               	.LM6:
+  39 0022 21E0      		ldi r18,lo8(1)
+  40               	.LM7:
+  41 0024 92E0      		ldi r25,lo8(2)
+  42               	.L6:
+  43               	.LM8:
+  44 0026 B19B      		sbis 54-32,1
+  45 0028 00C0      		rjmp .L6
+  46               	.LM9:
+  47 002a 85B1      		in r24,37-32
+  48 002c 8227      		eor r24,r18
+  49 002e 85B9      		out 37-32,r24
+  50               	.LM10:
+  51 0030 96BB      		out 54-32,r25
+  52 0032 00C0      		rjmp .L6
+  53               	.LFE2:
+  79               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccXGFy15.s:2      *ABS*:0000003f __SREG__
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccXGFy15.s:3      *ABS*:0000003e __SP_H__
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccXGFy15.s:4      *ABS*:0000003d __SP_L__
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccXGFy15.s:5      *ABS*:00000034 __CCP__
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccXGFy15.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccXGFy15.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\JAHIRA~1\AppData\Local\Temp/ccXGFy15.s:18     .text:00000000 main
+
+NO UNDEFINED SYMBOLS
